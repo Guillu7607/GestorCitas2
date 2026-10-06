@@ -11,7 +11,7 @@ import java.util.List;
 public class DAOCita {
 
     // 1. OBTENER TODAS LAS CITAS DE UN PACIENTE (Para cargar la tabla / DataView)
-    public List<Citas> ob tenerCitasPorPaciente(int idPaciente) {
+    public List<Citas> obtenerCitasPorPaciente(int idPaciente) {
         List<Citas> listaCitas = new ArrayList<>();
         String sql = "SELECT idCitas, nombreEspec, Fecha, idPaciente FROM citas WHERE idPaciente = ?";
 

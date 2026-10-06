@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class DaoPaciente extends ConexionBD {
-    @Override
+public class DAOPaciente extends ConexionBD {
     public List<Paciente> obtenerPacientes() {
         List<Paciente> lista = new ArrayList<>();
         // Calificas la tabla con "esquema1.pacientes"
         String sql = "SELECT id, nombre FROM esquema1.pacientes";
 
-        try (Connection conn = ConexionBD.obtenerConexion();
+        try (Connection conn = ConexionBD.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
