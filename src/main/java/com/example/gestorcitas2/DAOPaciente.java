@@ -1,4 +1,6 @@
 package com.example.gestorcitas2;
+import java.sql.*;
+import java.util.ArrayList;
 
 
 public class DaoPaciente extends ConexionBD {
