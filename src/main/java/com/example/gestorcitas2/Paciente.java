@@ -9,8 +9,7 @@ public class Paciente {
     private String email;
     private String password;
 
-    // Constructor vacío
-    public Paciente() {}
+
 
     // Constructor con parámetros (sin idPaciente para inserciones)
     public Paciente(String dni, String nombre, String direccion, String telefono, String email, String password) {
@@ -31,6 +30,9 @@ public class Paciente {
         this.telefono = telefono;
         this.email = email;
         this.password = password;
+    }
+
+    public Paciente(int id, String nombre) {
     }
 
     // Getters y Setters
@@ -67,4 +69,25 @@ public class Paciente {
     }
 
     public String getTelefono() {
-        return
+        return telefono;
+    }
+    public void setTelefono(){
+        this.telefono= telefono;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
